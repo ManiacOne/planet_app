@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/clean_arch/deeds/features/Hero/presentation/Widgets/big_text.dart';
+import 'package:flutter_application_1/core/widgets/big_text.dart';
 import 'package:flutter_application_1/core/constants/colors.dart';
 import 'package:flutter_application_1/core/constants/dimensions.dart';
 

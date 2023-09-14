@@ -3,8 +3,8 @@ import 'package:flutter_application_1/core/widgets/big_text.dart';
 import 'package:flutter_application_1/core/widgets/small_text.dart';
 import 'package:flutter_application_1/core/constants/dimensions.dart';
 
-class HeaderSubHeader extends StatelessWidget {
-  const HeaderSubHeader({super.key});
+class HeaderSubHeaderInitiatives extends StatelessWidget {
+  const HeaderSubHeaderInitiatives({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,12 +16,12 @@ class HeaderSubHeader extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:[
-          BigText(title: "Deeds"),
-          SizedBox(height: Dimensions.sizedHeight40),
+        children: [
+          BigText(title: "Initiatives Nearby"),
+          SizedBox(height: Dimensions.sizedHeight16),
           SmallText(
               subtitle:
-                  "Great work! keep taking pledges and participating in events")
+                  "Join drives and events nearby to better our community")
         ],
       ),
     );

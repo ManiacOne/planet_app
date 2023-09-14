@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/clean_arch/deeds/features/Hero/presentation/Widgets/small_cards.dart';
+import 'package:flutter_application_1/core/widgets/small_cards.dart';
 import 'package:flutter_application_1/core/constants/colors.dart';
 import 'package:flutter_application_1/core/constants/dimensions.dart';
+import 'package:flutter_application_1/core/widgets/tabs_list_view.dart';
 
 class OurPledges extends StatefulWidget {
   const OurPledges({super.key});
@@ -40,27 +41,7 @@ class _OurPledgesState extends State<OurPledges> {
         SizedBox(
           height: Dimensions.sizedHeight24,
         ),
-        Container(
-          height: Dimensions.sizedHeight31,
-          child: ListView.builder(
-              itemCount: tabs.length,
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) {
-                if (_pageController == index){
-                  return SmallCard(
-                    title: tabs[index],
-                    color: AppColors.smallCardColor,
-                  );
-                }
-                else{
-                  return SmallCard(
-                    title: tabs[index],
-                    color: Colors.white,
-                  );
-                }
-              }),
-        ),
+        TabsListView(tabs: tabs)
       ],
     );
   }

@@ -1,16 +1,22 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/clean_arch/deeds/features/Hero/presentation/screens/deeds.dart';
 import 'package:flutter_application_1/clean_arch/deeds/features/Initiatives/presentation/screens/initiatives.dart';
 
 class Routes {
-  onGenerateRoutes(RouteSettings routeSettingss) {
-    // switch (routeSettingss.name) {
-    //   case "initiatives":
-    //     return CupertinoPageRoute(builder: (context) => 
-    //     const Initiatives());
+    static Route<dynamic> onGenerateRoute(RouteSettings routeSettings) {
+    switch (routeSettings.name) {
+      case Deeds.routeName :
+        return  MaterialPageRoute(builder: (_) => const Deeds());
 
-    //     break;
-    //   default:
-    // }
+      case Initiatives.routeName :
+        return MaterialPageRoute(builder: (_) => const Initiatives());
+
+       default: return MaterialPageRoute(
+            builder: (_) => const Scaffold(
+                  body: Center(
+                      child: Text('No route defined')),
+                ));
+    }
   }
 }
